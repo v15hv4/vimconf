@@ -78,7 +78,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions docker docker-compose kubectl systemd)
+plugins=(git zsh-autosuggestions docker docker-compose kubectl systemd zsh-ssh)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -126,4 +126,23 @@ export PATH=$PATH:~/.yarn/bin
 
 # local binaries
 export PATH=$PATH:/home/v15hv4/.local/bin
-eval "$(register-python-argcomplete shaman)"
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
+# golang
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/sbin:/home/v15hv4/.yarn/bin:/home/v15hv4/.local/bin:/usr/local/go/bin
+
+# autoload -Uz compinit
+# zstyle ':completion:*' menu select
+# fpath+=~/.zfunc
+# compinit
+
+# fpath+=~/.zfunc
+# autoload -Uz compinit && compinit
+# PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/sbin:/home/v15hv4/.yarn/bin:/home/v15hv4/.local/bin:/usr/local/go/bin:/home/v15hv4/.local/bin:~/.local/bin
+# fpath+=~/.zfunc
+# autoload -Uz compinit && compinit
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/sbin:/home/v15hv4/.yarn/bin:/home/v15hv4/.local/bin:/usr/local/go/bin:/home/v15hv4/.local/bin:~/.local/bin
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit

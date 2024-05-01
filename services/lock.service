@@ -1,0 +1,12 @@
+[Unit]
+Description=Turn light-locker on before sleep
+Before=sleep.target
+
+[Service]
+Type=forking
+Environment=XDG_SEAT_PATH="/org/freedesktop/DisplayManager/Seat0"
+ExecStart=/usr/bin/dm-tool lock
+ExecStartPost=/usr/bin/sleep 1
+
+[Install]
+WantedBy=sleep.target

@@ -14,17 +14,19 @@ sudo apt install git zsh x11-xserver-utils
 git clone https://github.com/v15hv4/dotfiles $INSTALL_ROOT
 
 # install utils
-sudo apt install bspwm sxhkd polybar rofi kitty dunst lightdm \
-  light bat exa duf tmux curl rsync htop gpg feh unzip psmisc \
-  nodejs python3 python-is-python3
+sudo apt install bspwm sxhkd polybar rofi kitty dunst lightdm light-locker \
+  light bat exa duf tmux curl rsync htop gpg feh unzip psmisc fzf lxappearance tlp flameshot \
+  nodejs python3 python-is-python3 python3-venv python3-pulsectl npm black jq \
 
 # install zsh plugins
 ## oh-my-zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ## zsh-autosuggestions
-git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ## powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+## zsh-ssh
+git clone --depth=1 https://github.com/sunlei/zsh-ssh ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-ssh
 
 # install latest picom
 sudo apt install libconfig-dev libdbus-1-dev libegl-dev libev-dev libgl-dev libepoxy-dev libpcre2-dev libpixman-1-dev libx11-xcb-dev libxcb1-dev libxcb-composite0-dev libxcb-damage0-dev libxcb-dpms0-dev libxcb-glx0-dev libxcb-image0-dev libxcb-present-dev libxcb-randr0-dev libxcb-render0-dev libxcb-render-util0-dev libxcb-shape0-dev libxcb-util-dev libxcb-xfixes0-dev libxext-dev meson ninja-build uthash-dev -y

@@ -156,6 +156,8 @@ XF86AudioMute
 
 XF86AudioMicMute
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+XF86Tools
+	pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # screenshots
 Print
@@ -163,8 +165,14 @@ Print
 
 # lock screen using light-locker
 {super,alt} + l
-	dm-tool lock
+	dm-tool switch-to-greeter
 
 # spotify
 XF86Audio{Play,Pause,Next,Prev}
     playerctl -p spotify {play-pause,play-pause,next,previous}
+
+# monitor
+super + ctrl + Up
+	xrandr --output DisplayPort-1 --mode 1920x1080 --rate 75.00 --output eDP --off
+super + ctrl + Down
+	xrandr --output eDP --mode 1440x900

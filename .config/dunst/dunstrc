@@ -1,15 +1,15 @@
 [global]
   follow = mouse
-  font = SF Pro Text Regular 11
+  font = SF Pro Text Regular 10
   width = 400
   origin = top-right
   alignment = left
   vertical_alignment = center
   ellipsize = middle
   offset = 10x45
-  padding = 15
-  horizontal_padding = 15
-  text_icon_padding = 15
+  padding = 10
+  horizontal_padding = 10
+  text_icon_padding = 10
   icon_position = left
   min_icon_size = 48
   max_icon_size = 64
